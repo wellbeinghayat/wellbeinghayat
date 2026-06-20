@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Wellbeing Hayat — mobile apps that simplify and improve human life."/>
+<title>Wellbeing Hayat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#f5f5f3;color:#1a1a1a}
+a{text-decoration:none}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600}
+
+/* NAV */
+nav{background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+.nav-wordmark{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#555;letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a{font-size:14px;color:#555;transition:color .2s}
+.nav-links a:hover{color:#1a1a1a}
+.nav-cta{background:#185FA5;color:#fff!important;padding:8px 18px;border-radius:8px;font-size:14px;font-weight:500}
+.nav-cta:hover{background:#0C447C!important}
+@media(max-width:640px){.nav-links .hide-mobile{display:none}}
+
+/* LOGO HERO */
+.logo-hero{text-align:center;padding:3rem 2rem 0;background:#fff}
+.logo-hero img{height:110px;width:auto;display:inline-block}
+
+/* HERO */
+.hero{padding:2.5rem 2rem 4.5rem;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08)}
+.hero-inner{max-width:800px;margin:0 auto;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#E6F1FB;color:#185FA5;font-size:12px;font-weight:500;padding:5px 14px;border-radius:20px;margin-bottom:1.5rem;border:1px solid #B5D4F4}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.15;margin-bottom:1.25rem;color:#1a1a1a}
+.hero h1 em{font-style:italic;color:#185FA5}
+.hero p{font-size:16px;color:#555;line-height:1.75;max-width:540px;margin:0 auto 2rem}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:#185FA5;color:#fff;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:500;transition:background .2s}
+.btn-primary:hover{background:#0C447C}
+.btn-outline{border:1.5px solid #ccc;color:#1a1a1a;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:500;background:#fff;transition:all .2s}
+.btn-outline:hover{border-color:#185FA5;color:#185FA5}
+.coming-soon-banner{background:#E6F1FB;border:1px solid #B5D4F4;border-radius:12px;max-width:640px;margin:2.5rem auto 0;padding:1.25rem 1.5rem}
+.coming-soon-banner strong{display:block;font-size:15px;font-weight:500;color:#042C53;margin-bottom:.35rem}
+.coming-soon-banner p{font-size:14px;color:#0C447C;line-height:1.65}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);border-radius:12px;overflow:hidden;max-width:560px;margin:2rem auto 0}
+.metric{background:#fff;padding:1.25rem;text-align:center}
+.metric-val{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#185FA5}
+.metric-label{font-size:12px;color:#888;margin-top:3px}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.section-inner{max-width:900px;margin:0 auto}
+.section-tag{font-size:11px;font-weight:500;color:#185FA5;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.6rem}
+.section-title{font-size:clamp(1.4rem,3vw,2.1rem);margin-bottom:.75rem;line-height:1.25;color:#1a1a1a}
+.section-sub{font-size:15px;color:#555;line-height:1.7;max-width:520px}
+
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2.75rem}
+.val-card{background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:1.4rem;transition:border-color .2s}
+.val-card:hover{border-color:#B5D4F4}
+.val-icon{width:40px;height:40px;background:#E6F1FB;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+.val-icon i{font-size:20px;color:#185FA5}
+.val-card h3{font-size:14px;font-weight:500;margin-bottom:.4rem;color:#1a1a1a}
+.val-card p{font-size:13px;color:#666;line-height:1.6}
+
+/* MISSION/VISION */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.75rem}
+@media(max-width:640px){.mv-grid,.about-cols{grid-template-columns:1fr!important}}
+.mv-card{background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:1.75rem}
+.mv-card h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#1a1a1a;margin-bottom:.75rem}
+.mv-card p{font-size:14px;color:#555;line-height:1.75}
+
+/* APPS */
+.apps-bg{background:#f9f9f7}
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:2.75rem}
+.app-card{background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:1.4rem;border-top-width:3px;border-top-style:solid}
+.app-card.testing{border-top-color:#378ADD}
+.app-card.soon{border-top-color:#BA7517}
+.app-card.future{border-top-color:#888}
+.app-status{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;margin-bottom:.9rem}
+.s-testing{background:#E6F1FB;color:#185FA5}
+.s-soon{background:#FAEEDA;color:#854F0B}
+.s-future{background:#f1f0ec;color:#5a5a58}
+.app-card h3{font-size:15px;font-weight:500;margin-bottom:.4rem;color:#1a1a1a}
+.app-card p{font-size:13px;color:#666;line-height:1.6;margin-bottom:1rem}
+.app-link{font-size:13px;color:#185FA5;font-weight:500;display:inline-flex;align-items:center;gap:4px}
+.app-link:hover{color:#0C447C}
+
+/* ABOUT */
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;margin-top:2.75rem}
+.about-text p{font-size:15px;color:#555;line-height:1.8;margin-bottom:1.25rem}
+.values-list{list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-top:1.25rem}
+.values-list li{display:flex;align-items:flex-start;gap:.65rem;font-size:14px;color:#555;line-height:1.5}
+.values-list i{color:#185FA5;margin-top:2px;flex-shrink:0}
+.tl-row{display:flex;gap:12px;margin-bottom:0}
+.tl-aside{display:flex;flex-direction:column;align-items:center;width:16px;flex-shrink:0}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:#185FA5;flex-shrink:0;margin-top:3px}
+.tl-line{width:1px;flex:1;background:rgba(0,0,0,0.1);min-height:28px}
+.tl-body{padding-bottom:1.25rem}
+.tl-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
+.tl-desc{font-size:13px;color:#666;line-height:1.5}
+
+/* CONTACT */
+.contact-bg{background:#E6F1FB;border-top:1px solid #B5D4F4}
+.contact-inner{max-width:580px;margin:0 auto;text-align:center}
+.contact-inner h2{font-size:clamp(1.6rem,3vw,2rem);color:#042C53;margin-bottom:.65rem}
+.contact-inner p{color:#185FA5;font-size:15px;line-height:1.7;margin-bottom:1.75rem}
+.contact-form{display:flex;gap:10px;max-width:400px;margin:0 auto;flex-wrap:wrap}
+.contact-form input{flex:1;min-width:170px;padding:11px 14px;border:1.5px solid #B5D4F4;border-radius:8px;font-size:14px;background:#fff;color:#042C53;outline:none;font-family:'DM Sans',sans-serif}
+.contact-form input:focus{border-color:#185FA5}
+.contact-form button{background:#185FA5;color:#fff;border:none;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif}
+.contact-form button:hover{background:#0C447C}
+
+/* FOOTER */
+footer{background:#fff;border-top:1px solid rgba(0,0,0,0.08);padding:2rem;text-align:center;font-size:13px;color:#888}
+footer span{color:#185FA5;font-weight:500}
+footer a{color:#888}
+footer a:hover{color:#185FA5}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wordmark">Wellbeing Hayat</div>
+  <ul class="nav-links">
+    <li class="hide-mobile"><a href="#mission">Mission</a></li>
+    <li class="hide-mobile"><a href="#apps">Apps</a></li>
+    <li class="hide-mobile"><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<div class="logo-hero">
+  <img src="logo.png" alt="Wellbeing Hayat logo"/>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-badge"><i class="ti ti-device-mobile"></i> Mobile apps for a better life</div>
+    <h1>Technology that <em>simplifies</em> and enriches human life</h1>
+    <p>Wellbeing Hayat is an IT startup building thoughtful mobile apps — for health, faith, family, and the everyday moments that matter most.</p>
+    <div class="hero-actions">
+      <a href="#apps" class="btn-primary">Explore Our Apps</a>
+      <a href="#mission" class="btn-outline">Our Mission</a>
+    </div>
+    <div class="coming-soon-banner">
+      <strong>Our apps are on their way</strong>
+      <p>We are in active development — building with care so every app we release earns your trust from day one. Great things are worth the wait.</p>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="metric-val">5+</div><div class="metric-label">Apps planned</div></div>
+      <div class="metric"><div class="metric-val">2</div><div class="metric-label">Platforms</div></div>
+      <div class="metric"><div class="metric-val">1</div><div class="metric-label">App in testing</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f9f9f7">
+  <div class="section-inner">
+    <div class="section-tag">What we stand for</div>
+    <h2 class="section-title">Built around people, not products</h2>
+    <p class="section-sub">Every app starts with a real human need — then we design the simplest, most reliable path to solving it.</p>
+    <div class="values-grid">
+      <div class="val-card"><div class="val-icon"><i class="ti ti-heart-rate-monitor"></i></div><h3>Health-forward design</h3><p>Apps that support physical and mental wellbeing through gentle, evidence-informed features.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="ti ti-layout-2"></i></div><h3>Radical simplicity</h3><p>Interfaces so clear that anyone can use them — regardless of age or tech confidence.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="ti ti-baby-carriage"></i></div><h3>Kids development focus</h3><p>Dedicated tools that nurture children's learning, growth, and healthy digital habits.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="ti ti-device-watch"></i></div><h3>Hardware integration</h3><p>Seamless connection with wearables and sensors for real-world, real-time insights.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="ti ti-shield-check"></i></div><h3>Privacy by default</h3><p>Minimal data collection and transparent practices — your data stays yours.</p></div>
+      <div class="val-card"><div class="val-icon"><i class="ti ti-globe"></i></div><h3>Inclusive by design</h3><p>Apps built for diverse communities — culturally aware, multilingual, and accessible.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="mission">
+  <div class="section-inner">
+    <div class="section-tag">Mission &amp; vision</div>
+    <h2 class="section-title">Why Wellbeing Hayat exists</h2>
+    <div class="mv-grid">
+      <div class="mv-card"><h3>Our mission</h3><p>To design and deliver mobile apps that genuinely improve the quality of everyday human life — making healthcare, faith, family connection, and personal growth more accessible, meaningful, and simple for people everywhere. We build technology that serves people, not the other way around.</p></div>
+      <div class="mv-card"><h3>Our vision</h3><p>A world where thoughtful technology bridges the gap between modern life and human flourishing. We envision a suite of apps — trusted by families, guided by values, and integrated with the devices people already use — that help every person live healthier, more connected, and more intentional lives.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="apps-bg" id="apps">
+  <div class="section-inner">
+    <div class="section-tag">Our apps</div>
+    <h2 class="section-title">A growing suite of purposeful apps</h2>
+    <p class="section-sub">No app is live yet — we are building carefully. Here is where everything stands today.</p>
+    <div class="apps-grid">
+      <div class="app-card testing">
+        <span class="app-status s-testing"><i class="ti ti-test-pipe" style="font-size:11px;margin-right:3px"></i>Testing phase</span>
+        <h3>TimeLocator</h3>
+        <p>Our first app entering real-world testing. TimeLocator helps users track, plan, and make sense of time across tasks, routines, and schedules — with a clean, distraction-free interface.</p>
+        <a href="#contact" class="app-link">Follow progress <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card soon">
+        <span class="app-status s-soon"><i class="ti ti-clock" style="font-size:11px;margin-right:3px"></i>Coming soon</span>
+        <h3>PrayerWell</h3>
+        <p>A mindful prayer companion that provides accurate prayer times and Qibla direction, and silences your device while praying — supporting daily spiritual practice with calm simplicity.</p>
+        <a href="#contact" class="app-link">Notify me <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>In development</span>
+        <h3>HearWell</h3>
+        <p>A hearing health app that uses your device's microphone and wearable sensors to monitor sound exposure, flag potentially harmful environments, and track ear health over time.</p>
+        <a href="#contact" class="app-link">Learn more <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>Future development</span>
+        <h3>HayatTrack</h3>
+        <p>Daily health and habit tracking that connects with wearables to give you a clear, holistic picture of your wellbeing trends — built for sustainable, long-term healthy living.</p>
+        <a href="#contact" class="app-link">Learn more <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>Future development</span>
+        <h3>CalmRoute</h3>
+        <p>A mindfulness companion that adapts to your stress signals and guides you through personalised breathing and rest routines — meeting you where you are, not where you think you should be.</p>
+        <a href="#contact" class="app-link">Learn more <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>Future development</span>
+        <h3>Kids Growth Hub</h3>
+        <p>An age-appropriate development companion for parents and children — tracking milestones, encouraging learning habits, and nurturing curiosity through play-based digital experiences.</p>
+        <a href="#contact" class="app-link">Learn more <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-inner">
+    <div class="section-tag">Who we are</div>
+    <h2 class="section-title">A startup with purpose</h2>
+    <div class="about-cols">
+      <div class="about-text">
+        <p>"Hayat" means <em>life</em> in Arabic and Turkish. Our name is our promise — technology in service of a fuller, healthier life for everyone, everywhere.</p>
+        <p>We are a small, focused team building apps that genuinely matter — with deep care for the people who use them and the communities they belong to.</p>
+        <ul class="values-list">
+          <li><i class="ti ti-check"></i>Human-first from day one</li>
+          <li><i class="ti ti-check"></i>Mobile + hardware convergence</li>
+          <li><i class="ti ti-check"></i>Committed to children's digital wellbeing</li>
+          <li><i class="ti ti-check"></i>Growing sustainably — impact over scale</li>
+        </ul>
+      </div>
+      <div>
+        <div class="tl-row"><div class="tl-aside"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-body"><div class="tl-title">Founded</div><div class="tl-desc">Vision set: build apps that meaningfully improve human life</div></div></div>
+        <div class="tl-row"><div class="tl-aside"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-body"><div class="tl-title">First app</div><div class="tl-desc">TimeLocator enters testing — our first step toward launch</div></div></div>
+        <div class="tl-row"><div class="tl-aside"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-body"><div class="tl-title">Roadmap locked</div><div class="tl-desc">PrayerWell, HearWell, HayatTrack, CalmRoute and Kids Growth Hub planned</div></div></div>
+        <div class="tl-row"><div class="tl-aside"><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-title">Today</div><div class="tl-desc">1 app in active testing — building the team and preparing for launch</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-bg" id="contact" style="padding:5rem 2rem">
+  <div class="contact-inner">
+    <div class="section-tag" style="color:#185FA5">Stay connected</div>
+    <h2>Be part of the journey</h2>
+    <p>Join our early access list and be the first to know when our apps launch — no spam, just meaningful updates.</p>
+    <div class="contact-form">
+      <input type="email" placeholder="Your email address" aria-label="Email address"/>
+      <button type="button">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 <span>Wellbeing Hayat</span> &middot; Building apps for a better life &middot; <a href="#">Privacy</a></p>
+</footer>
+
+</body>
+</html>
