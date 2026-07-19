@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Apps successfully launched by Wellbeing Hayat."/>
+<title>Launched Apps — Wellbeing Hayat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wordmark">Wellbeing Hayat</div>
+  <ul class="nav-links">
+    <li class="hide-mobile"><a href="index.html#mission">Mission</a></li>
+    <li class="hide-mobile"><a href="index.html#apps">Apps</a></li>
+    <li class="hide-mobile"><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<div class="logo-hero">
+  <img src="logo.png" alt="Wellbeing Hayat logo"/>
+</div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &middot; Successfully launched apps</div>
+  <div class="section-tag">Successfully launched apps</div>
+  <h1>Our launched apps</h1>
+  <p>We're building carefully so every app earns your trust from day one.</p>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="coming-soon-page">
+      <i class="ti ti-rocket"></i>
+      <h3>Coming soon</h3>
+      <p>No apps have launched yet. Our first app, WhereIParked, is currently in testing — once it's ready, it will be the first to appear here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-bg" id="contact" style="padding:5rem 2rem">
+  <div class="contact-inner">
+    <div class="section-tag" style="color:#185FA5">Stay connected</div>
+    <h2>Be part of the journey</h2>
+    <p>Join our early access list and be the first to know when our apps launch — no spam, just meaningful updates.</p>
+    <button class="btn-primary" onclick="document.getElementById('subscribe-popup').classList.add('active')" style="margin:0 auto">Subscribe Now</button>
+  </div>
+</section>
+
+<!-- SUBSCRIBE POPUP -->
+<div class="popup-overlay" id="subscribe-popup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="document.getElementById('subscribe-popup').classList.remove('active')" aria-label="Close">&times;</button>
+    <h3>Join the Wellbeing Hayat journey</h3>
+    <p>Be the first to know when our apps launch. No spam — just meaningful updates.</p>
+    <iframe width="100%" height="420" src="https://5879a5d1.sibforms.com/v2/serve/MUIFAGWa46tz1g1s63EVZZtLrT6neQmph-eb57z1ZjzKvcyA9abwcV47tosVNUU6_7mdzBFE-uJmuSolvAJ_p_4grZyRShpwcIhSTXfCAC7OjD_TkjFl_oi2CgCSXavGWTgoAcR7gI_HzlX3ULG8fqHxG_N1jxNq49BEZo2OWdGqFcv1i8J8s5a9B28Yn0fcm423ky39_4PQHpRAPQ==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;border:none;"></iframe>
+  </div>
+</div>
+
+<script>
+  document.getElementById('subscribe-popup').addEventListener('click', function(e){
+    if(e.target === this) this.classList.remove('active');
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 <span>Wellbeing Hayat</span> &middot; Building apps for a better life &middot; <a href="mailto:info@wellbeinghayat.com">info@wellbeinghayat.com</a> &middot; <a href="#">Privacy</a></p>
+</footer>
+
+</body>
+</html>

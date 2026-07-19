@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="The apps Wellbeing Hayat has planned — PrayerWell, HearWell, HayatTrack, CalmRoute and Kids Growth Hub."/>
+<title>Planned Apps — Wellbeing Hayat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wordmark">Wellbeing Hayat</div>
+  <ul class="nav-links">
+    <li class="hide-mobile"><a href="index.html#mission">Mission</a></li>
+    <li class="hide-mobile"><a href="index.html#apps">Apps</a></li>
+    <li class="hide-mobile"><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<div class="logo-hero">
+  <img src="logo.png" alt="Wellbeing Hayat logo"/>
+</div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> &middot; Apps planned</div>
+  <div class="section-tag">Apps planned</div>
+  <h1>5 apps on our roadmap</h1>
+  <p>Beyond WhereIParked, our first app in testing, here is everything else we're building next.</p>
+</section>
+
+<section class="apps-bg">
+  <div class="section-inner">
+    <div class="apps-grid">
+      <div class="app-card soon">
+        <span class="app-status s-soon"><i class="ti ti-clock" style="font-size:11px;margin-right:3px"></i>Coming soon</span>
+        <h3>PrayerWell</h3>
+        <p>A mindful prayer companion that provides accurate prayer times and Qibla direction, and silences your device while praying — supporting daily spiritual practice with calm simplicity.</p>
+        <a href="index.html#contact" class="app-link">Notify me <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>In development</span>
+        <h3>HearWell</h3>
+        <p>A hearing health app that uses your device's microphone and wearable sensors to monitor sound exposure, flag potentially harmful environments, and track ear health over time.</p>
+        <a href="index.html#contact" class="app-link">Notify me <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>Future development</span>
+        <h3>HayatTrack</h3>
+        <p>Daily health and habit tracking that connects with wearables to give you a clear, holistic picture of your wellbeing trends — built for sustainable, long-term healthy living.</p>
+        <a href="index.html#contact" class="app-link">Notify me <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>Future development</span>
+        <h3>CalmRoute</h3>
+        <p>A mindfulness companion that adapts to your stress signals and guides you through personalised breathing and rest routines — meeting you where you are, not where you think you should be.</p>
+        <a href="index.html#contact" class="app-link">Notify me <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="app-card future">
+        <span class="app-status s-future"><i class="ti ti-tool" style="font-size:11px;margin-right:3px"></i>Future development</span>
+        <h3>Kids Growth Hub</h3>
+        <p>An age-appropriate development companion for parents and children — tracking milestones, encouraging learning habits, and nurturing curiosity through play-based digital experiences.</p>
+        <a href="index.html#contact" class="app-link">Notify me <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-bg" id="contact" style="padding:5rem 2rem">
+  <div class="contact-inner">
+    <div class="section-tag" style="color:#185FA5">Stay connected</div>
+    <h2>Be part of the journey</h2>
+    <p>Join our early access list and be the first to know when these apps launch — no spam, just meaningful updates.</p>
+    <button class="btn-primary" onclick="document.getElementById('subscribe-popup').classList.add('active')" style="margin:0 auto">Subscribe Now</button>
+  </div>
+</section>
+
+<!-- SUBSCRIBE POPUP -->
+<div class="popup-overlay" id="subscribe-popup">
+  <div class="popup-box">
+    <button class="popup-close" onclick="document.getElementById('subscribe-popup').classList.remove('active')" aria-label="Close">&times;</button>
+    <h3>Join the Wellbeing Hayat journey</h3>
+    <p>Be the first to know when our apps launch. No spam — just meaningful updates.</p>
+    <iframe width="100%" height="420" src="https://5879a5d1.sibforms.com/v2/serve/MUIFAGWa46tz1g1s63EVZZtLrT6neQmph-eb57z1ZjzKvcyA9abwcV47tosVNUU6_7mdzBFE-uJmuSolvAJ_p_4grZyRShpwcIhSTXfCAC7OjD_TkjFl_oi2CgCSXavGWTgoAcR7gI_HzlX3ULG8fqHxG_N1jxNq49BEZo2OWdGqFcv1i8J8s5a9B28Yn0fcm423ky39_4PQHpRAPQ==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;border:none;"></iframe>
+  </div>
+</div>
+
+<script>
+  document.getElementById('subscribe-popup').addEventListener('click', function(e){
+    if(e.target === this) this.classList.remove('active');
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 <span>Wellbeing Hayat</span> &middot; Building apps for a better life &middot; <a href="mailto:info@wellbeinghayat.com">info@wellbeinghayat.com</a> &middot; <a href="#">Privacy</a></p>
+</footer>
+
+</body>
+</html>
